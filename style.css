@@ -1,0 +1,136 @@
+/* ---------- Page ---------- */
+body {
+    margin: 0;
+    padding-bottom: 40px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7, #ede7f6);
+}
+
+/* ---------- Title ---------- */
+.header {
+    text-align: center;
+    padding: 30px 10px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+    background: linear-gradient(90deg, #6a1b9a, #d81b60);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeDown 0.8s ease;
+}
+
+.header p {
+    margin-top: 8px;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+/* ---------- Search and Filter ---------- */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.controls input,
+.controls select {
+    padding: 10px 14px;
+    border: 1px solid #6a1b9a;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.controls input {
+    width: 250px;
+}
+
+.controls input:focus,
+.controls select:focus {
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+}
+
+/* ---------- Cards Container ---------- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- Card ---------- */
+.card {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(106, 27, 154, 0.3);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid purple;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f3e5f5;
+    transition: transform 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    color: #6a1b9a;
+}
+
+.card p {
+    margin: 3px 0;
+    color: #444;
+}
+
+/* ---------- No result message ---------- */
+.no-result {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #6a1b9a;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
